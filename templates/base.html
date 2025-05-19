@@ -10,11 +10,13 @@
 
 <body>
 	<div class="content">
-	{% include "includes/nav.html" %}
+		{% include "includes/nav.html" %}
 
-	{% block content %}
-	{% endblock content %}
+		{% block content %}
+		{% endblock content %}
 	</div>
+
+	<script src="{% static "js/scripts.js" %}"></script>
 </body>
 
 </html>

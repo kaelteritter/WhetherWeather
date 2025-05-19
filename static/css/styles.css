@@ -21,6 +21,8 @@
 
 
 body {
+    display: flex;
+    justify-content: center;
     background-color: rgb(243, 243, 243);
     font-family: "Roboto";
     color: rgb(98, 98, 98);
@@ -31,10 +33,22 @@ h3 {
     padding: 0;
 }
 
+.navigation h3:hover {
+    filter: contrast(50%);
+    cursor: pointer;
+}
+
+.navigation-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .content {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 500px;
+    align-self: center;
 }
 
 .content-item {
@@ -48,6 +62,8 @@ h3 {
     justify-content: center;
     padding: 10px;
     gap: 15px;
+    filter: drop-shadow(0 0 0.1rem #bdbdbd);
+    border-radius: 10px;
 }
 
 
@@ -59,6 +75,11 @@ h3 {
     height: 36px;
     border-radius: 5px;
     border: 1px solid rgb(224, 224, 225);
+    transition: 1s;
+}
+
+.location-search-form:hover {
+    border: 1px solid rgb(202, 202, 203);
 }
 
 .location-search-input {
@@ -86,13 +107,14 @@ h3 {
 
 .weather-card {
     background-color: white;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 475px;
-    align-self: center;
+    width: 500px;
     transition: 2s;
     filter: drop-shadow(0 0 0.1rem #bdbdbd);
+    padding-bottom: 5px;
 }
 
 .weather-card:hover {
@@ -115,7 +137,7 @@ h3 {
     justify-content: space-between;
     padding: 0 25px;
     grid-template-columns: 1fr auto 1fr;
-    border-bottom: 1px solid rgb(224, 224, 225);
+    /* border-bottom: 1px solid rgb(224, 224, 225); */
 }
 
 .weather-main-info > *:first-child {
@@ -133,11 +155,13 @@ h3 {
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: 0 0;
+    border-radius: 10px 10px 0 0; 
     height: 450px;
     width: 100%;
     overflow: hidden;
     animation: zoom 40s infinite alternate;
 }
+
 
 @keyframes zoom {
   from { background-size: 100%; }
@@ -150,6 +174,7 @@ h3 {
     display: flex;
     padding: 25px;
     justify-content: space-between;
+    align-items: center;
     color: white;
 }
 
