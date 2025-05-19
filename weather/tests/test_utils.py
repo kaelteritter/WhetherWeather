@@ -4,7 +4,7 @@ from django.conf import settings
 from ..utils import get_weather
 
 
-class GetLocationWeather(TestCase):
+class GetLocationWeatherTest(TestCase):
     def setUp(self):
         self.get_weather = get_weather
 
