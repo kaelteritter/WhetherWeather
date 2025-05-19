@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<form class="location-search" action="">
-	{{ search_location_input.as_p }}
+<form class="location-search" action="" method="get">
+	{{ location_form.as_p }}
 </form>
+
+{% if weather %}
+<div>
+	{{ weather }}
+</div>
+{% endif %}
+
 {% endblock content %}

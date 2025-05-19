@@ -11,15 +11,11 @@ def get_api_url(api_key, **kwargs):
     return API_URL
 
 
-def get_weather(location: str, api_key: str, **kwargs):
+def get_weather(api_key: str, location: str, **kwargs):
     response = requests.get(get_api_url(api_key, q=location)).json()
     return response
 
 
-
-
-# print(get_api_url('131', lat=12, lon=13))
-print(get_weather('London', 'd3f243d96fd958c518995fa949ee0a9a'))
 
 
 

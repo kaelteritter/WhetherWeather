@@ -9,5 +9,5 @@ class GetLocationWeatherTest(TestCase):
         self.get_weather = get_weather
 
     def test_weather_got_by_location(self):
-        result = self.get_weather('Rome', settings.OPEN_WEATHER_API_ID)
+        result = self.get_weather(settings.OPEN_WEATHER_API_ID, 'Rome')
         self.assertEqual(result.get('cod'), 200)
