@@ -8,6 +8,7 @@ environ.Env.read_env(BASE_DIR / '.env')
 
 SECRET_KEY = env.str('SECRET_KEY')
 DEBUG = env.bool('DEBUG')
+OPEN_WEATHER_API = env.str('OPEN_WEATHER_API')
 
 ALLOWED_HOSTS = []
 
