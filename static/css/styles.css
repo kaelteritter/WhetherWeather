@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(243, 243, 243);
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content-item {
+    background-color: white;
+    border: 1px solid rgb(215, 214, 214);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 15px;
+}
+
+
+.location-search-form {
+    display: flex;
+    padding: 0 5px;
+    background-color: rgb(243, 243, 243);
+    width: 400px;
+    height: 36px;
+    border-radius: 5px;
+    border: 1px solid rgb(224, 224, 225);
+}
+
+.location-search-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.location-search-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}

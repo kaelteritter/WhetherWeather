@@ -12,7 +12,7 @@ def get_api_url(api_key, **kwargs):
 
 
 def get_weather(api_key: str, location: str, **kwargs):
-    response = requests.get(get_api_url(api_key, q=location)).json()
+    response = requests.get(get_api_url(api_key, q=location, **kwargs)).json()
     return response
 
 
