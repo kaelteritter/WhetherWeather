@@ -1,0 +1,25 @@
+<div class="weather-card">
+  <div class="weather-card-child weather-background">
+    <div class="weather-info-upper">
+      <div class="weather-main-meta">
+        <p class="weather-info location-temp">{{ weather.main.temp|floatformat:0 }}⁠°C</p>
+        <p class="weather-info location-loc">{{ weather.name|upper }}</p>
+      </div>
+      <p class="weather-info location-wind">{{ weather.wind.speed|floatformat:0 }} м/с</p>
+    </div>
+  </div>
+  <div class="weather-card-child">
+    <div class="weather-main-info">
+      <p class="weather-info location-description">{{ weather.weather.0.description|capfirst }}</p>
+      <img class="weather-condition-icon" src="https://openweathermap.org/img/wn/{{ weather.weather.0.icon}}.png">
+      <p class="weather-info location-temp">+{{ weather.main.temp|floatformat:0 }}⁠°C</p>
+    </div>
+  </div>
+  <div class="weather-card-child">
+    <div class="weather-main-info">
+      <p class="weather-info location-description">{{ weather.weather.0.description|capfirst }}</p>
+      <img class="weather-condition-icon" src="https://openweathermap.org/img/wn/{{ weather.weather.0.icon}}.png">
+      <p class="weather-info location-temp">+{{ weather.main.temp|floatformat:0 }}⁠°C</p>
+    </div>
+  </div>
+</div>

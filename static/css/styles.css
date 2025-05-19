@@ -1,5 +1,29 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-400.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/roboto-400.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Italic";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/roboto-italic.ttf");
+}
+
+
 body {
     background-color: rgb(243, 243, 243);
+    font-family: "Roboto";
+    color: rgb(98, 98, 98);
 }
 
 h3 {
@@ -48,4 +72,93 @@ h3 {
     border: none;
     background-color: transparent;
     cursor: pointer;
+}
+
+.location-wind {
+    font-size: 24px;
+}
+
+.weather-info {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.weather-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 475px;
+    align-self: center;
+    transition: 2s;
+    filter: drop-shadow(0 0 0.1rem #bdbdbd);
+}
+
+.weather-card:hover {
+    transform: scale(1.01);
+    filter: brightness(102%) drop-shadow(0 0 0.5rem #757575);
+    
+}
+
+.weather-condition-icon {
+    transition: 1s;
+}
+.weather-condition-icon:hover {
+    transform: scale(1.01);
+    filter: brightness(105%) drop-shadow(0 0.25rem 0.25rem #757575) invert(1);   
+}
+
+.weather-main-info {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    grid-template-columns: 1fr auto 1fr;
+    border-bottom: 1px solid rgb(224, 224, 225);
+}
+
+.weather-main-info > *:first-child {
+    justify-self: start;
+    text-align: left;
+}
+
+.weather-main-info > *:last-child {
+    justify-self: end;
+    text-align: right;
+}
+
+.weather-background {
+    background-image: url(../img/cloudy.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: 0 0;
+    height: 450px;
+    width: 100%;
+    overflow: hidden;
+    animation: zoom 40s infinite alternate;
+}
+
+@keyframes zoom {
+  from { background-size: 100%; }
+  to { background-size: 120%; }
+}
+
+
+
+.weather-info-upper {
+    display: flex;
+    padding: 25px;
+    justify-content: space-between;
+    color: white;
+}
+
+.weather-main-meta {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+.weather-main-meta .location-temp {
+    font-size: 60px;
 }

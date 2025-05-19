@@ -1,6 +1,6 @@
 {% load static %}
 <nav class="navigation content-item">
-  <h3 class="navigation-item">Погода</h3>
+  <h3 class="navigation-item">WhetherWeather</h3>
   <form class="navigation-item location-search-form" action="{% url "weather:index" %}" method="get">
     {{ location_form.name }}
     <button class="location-search-button" type="submit">
