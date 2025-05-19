@@ -13,4 +13,5 @@ class LocationModelTest(TestCase):
         self.assertEqual(str(self.location), 'London')
 
     def test_model_has_verbose_name(self):
-        ...
+        self.assertEqual(self.location._meta.verbose_name, 'Локация')
+        self.assertEqual(self.location._meta.verbose_name_plural, 'Локации')
