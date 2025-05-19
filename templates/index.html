@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 <form class="location-search" action="">
-	<input type="text">
+	{{ search_location_input.as_p }}
 </form>
 {% endblock content %}
