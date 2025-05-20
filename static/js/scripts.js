@@ -3,10 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const condition = container.dataset.condition;
     
     const backgrounds = {
-        'Overcast': 'url(/static/img/overcast.jpg)',
-        'Clear': 'url(/static/img/sunny.jpg)',
-        'Clouds': 'url(/static/img/cloudy.jpg)',
-        'Rain': 'url(/static/img/rainy.jpg)'
+        'Thunderstorm': 'url(/static/img/thunderstorm.png)',
+        'Clear': 'url(/static/img/clear.png)',
+        'Clouds': 'url(/static/img/clouds.png)',
+        'Rain': 'url(/static/img/rain.png)',
+        'Drizzle': 'url(/static/img/drizzle.png)',
     };
     
     if (backgrounds[condition]) {

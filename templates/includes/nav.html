@@ -3,7 +3,7 @@
   <h3 class="navigation-item">
     <a href="/">WhetherWeather</a>
   </h3>
-  <form class="navigation-item location-search-form" action="{% url "weather:index" %}" method="get">
+  <form class="navigation-item location-search-form" action="{% url "weather:index" %}" method="get" novalidate>
     {{ location_form.name }}
     <button class="location-search-button" type="submit">
       <img src="{% static "svg/search.svg" %}" alt="">
